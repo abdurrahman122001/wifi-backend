@@ -24,10 +24,9 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: '*', // your frontend URL
+  origin: 'http://localhost:4100',
   credentials: true,
 }));
-
 // Static folder for uploads
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
